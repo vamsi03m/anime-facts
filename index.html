@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Anime Facts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ee0979, #ff6a00);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Anime Facts</h1>
+        <p id="fact"></p>
+        <button id="newFactButton">Get a New Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Anime has its roots in early 20th-century Japanese film. The first known anime, 'Namakura Gatana' (An Obtuse Sword), was created in 1917.",
+            "Anime encompasses a wide range of genres, including action, romance, horror, fantasy, and even educational content. There's something for everyone!",
+            "Many anime series are adaptations of manga (Japanese comic books). Popular titles like 'Naruto,' 'One Piece,' and 'Attack on Titan' started as manga before being adapted into anime.",
+            "Anime has significantly influenced global pop culture, inspiring movies, video games, and fashion. It has a dedicated fanbase worldwide.",
+            "Voice actors in anime, known as 'seiyuu,' often have a significant following. Some seiyuu even hold concerts and release music albums.",
+            "Founded by Hayao Miyazaki and Isao Takahata, Studio Ghibli is one of the most renowned anime studios, known for films like 'Spirited Away' and 'My Neighbor Totoro.'",
+            "Events like Anime Expo and Comic-Con celebrate anime culture, featuring panels, merchandise, and cosplay competitions.",
+            "Some anime series undergo significant changes when localized for Western audiences, including edits for violence, nudity, or cultural references.",
+            "While many people associate anime with TV series, there are numerous critically acclaimed anime films, including 'Your Name' and 'Akira.'",
+            "Anime is not just popular in Japan; it has a massive following in countries like the United States, France, and Brazil, leading to a growing market for dubbed and subtitled versions."
+        ];
+
+        document.getElementById('newFactButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
